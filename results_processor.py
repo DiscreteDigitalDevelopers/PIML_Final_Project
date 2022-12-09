@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 import pickle as pkl
 
 def main():
-	model = 'random_forest'
+	model = 'logistic_regression'
 
-	with open('results.pkl', 'rb') as fp:
+	with open('results/results.pkl', 'rb') as fp:
 		results = pkl.load(fp)
 
-	with open('results_gb.pkl', 'rb') as fp:
-		preds = pkl.load(fp)
+	with open('results/results_lr.pkl', 'rb') as fp:
+		preds = pkl.load(fp)[0]
 
 	# preds = results[0]
 	labels = results[1]
@@ -56,7 +56,7 @@ def main():
 	plt.ylim(0, 650)
 	plt.xlabel('Rating')
 	plt.ylabel('Number of Predictions/Labels')
-	plt.title('MSE Distribution')
+	plt.title('Histogram Distribution')
 	plt.savefig(f'media/{model}/histogram.png', dpi=200)
 	plt.clf()
 

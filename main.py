@@ -20,10 +20,10 @@ batch_size = 16
 learning_rate = 1e-6
 max_epochs = 100
 window_size = 256
-load_from_file = True
+load_from_file = False
 progress_bar = True
-train_model = False
-load_model = True
+train_model = True
+load_model = False
 
 
 def main():
