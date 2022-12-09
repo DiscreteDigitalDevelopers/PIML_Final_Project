@@ -3,12 +3,15 @@ import matplotlib.pyplot as plt
 import pickle as pkl
 
 def main():
-	model = 'bert'
+	model = 'random_forest'
 
 	with open('results.pkl', 'rb') as fp:
 		results = pkl.load(fp)
 
-	preds = results[0]
+	with open('results_gb.pkl', 'rb') as fp:
+		preds = pkl.load(fp)
+
+	# preds = results[0]
 	labels = results[1]
 	adiffs = results[2]
 	diffs = preds - labels

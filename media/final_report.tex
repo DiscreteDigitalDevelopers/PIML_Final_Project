@@ -230,23 +230,23 @@ The loss function used was mean squared error (MSE).  For this particular regres
 \subsubsection{Scatter Distribution and Histogram}
 \mbox{}\\
 \begin{minipage}{0.45\textwidth}
-\includegraphics[scale=0.5]{bert/scatter.png}
+\includegraphics[scale=0.5]{random_forest/scatter.png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\textwidth}
 \mbox{}\\
-\includegraphics[scale=0.5]{bert/histogram.png}
+\includegraphics[scale=0.5]{random_forest/histogram.png}
 \end{minipage}
 
 \subsubsection{Error Distributions}
 \mbox{}\\
 \begin{minipage}{0.45\textwidth}
-\includegraphics[scale=0.5]{bert/error.png}
+\includegraphics[scale=0.5]{random_forest/error.png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\textwidth}
 \mbox{}\\
-\includegraphics[scale=0.5]{bert/squared_error.png}
+\includegraphics[scale=0.5]{random_forest/squared_error.png}
 \end{minipage}
 
 
@@ -254,23 +254,23 @@ The loss function used was mean squared error (MSE).  For this particular regres
 \subsubsection{Scatter Distribution and Histogram}
 \mbox{}\\
 \begin{minipage}{0.45\textwidth}
-\includegraphics[scale=0.5]{bert/scatter.png}
+\includegraphics[scale=0.5]{logistic_regression/scatter.png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\textwidth}
 \mbox{}\\
-\includegraphics[scale=0.5]{bert/histogram.png}
+\includegraphics[scale=0.5]{logistic_regression/histogram.png}
 \end{minipage}
 
 \subsubsection{Error Distributions}
 \mbox{}\\
 \begin{minipage}{0.45\textwidth}
-\includegraphics[scale=0.5]{bert/error.png}
+\includegraphics[scale=0.5]{logistic_regression/error.png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\textwidth}
 \mbox{}\\
-\includegraphics[scale=0.5]{bert/squared_error.png}
+\includegraphics[scale=0.5]{logistic_regression/squared_error.png}
 \end{minipage}
 
 
@@ -302,9 +302,9 @@ The loss function used was mean squared error (MSE).  For this particular regres
 \begin{tabular}{c|cccc}
 Model & Mean Error & MSE & Std. Dev. of Error & Range of Error\\
 \hline
-Random Forest & $0.8033$ & $1.1179$ & $1.0480$ & $-4.7709$ to $4.9968$\\
-Logistic Regression & $0.8033$ & $1.1179$ & $1.0480$ & $-4.7709$ to $4.9968$\\
+Random Forest & $1.1778$ & $2.2660$ & $1.5053$ & $-3.8000$ to $6.5000$\\
+Logistic Regression & $2.1565$ & $7.3299$ & $2.6959$ & $-8.3000$ to $8.000$\\
 BERT & $0.8033$ & $1.1179$ & $1.0480$ & $-4.7709$ to $4.9968$
-\end{tabular}\\[2mm]
+\end{tabular}\\[5mm]
 From the results above, it is evident that BERT performs the best out of the 3 models that were trained - by all metrics, it is more accurate and has less variance in the error than the other models.  That being said, the BERT model does not predict any ratings below approximately $4.0$.  This is most likely due to the insufficient number of data points for ratings under $4.0$.
 \end{document}
